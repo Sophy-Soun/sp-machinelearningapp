@@ -19,3 +19,6 @@ with st.expander("Data"):
 with st.expander('Data Visulization'):
   # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g","sex"
   st.scatter_chart(data = df, x ='bill_length_mm', y = 'body_mass_g', color = 'species')
+
+with st.siedbar:
+  st.header('Input Features')
