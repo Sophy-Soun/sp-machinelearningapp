@@ -10,10 +10,10 @@ with st.expander("Data"):
   st.write('This the machine learning app')
   df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv')
   df
-  st.write('## X')
+  st.write('**X**')
   X_raw = df.drop('species', axis=1)
   X_raw
-  st.write('## y')
+  st.write('**y**')
   y_raw = df.species
   y_raw
 with st.expander('Data Visulization'):
@@ -50,8 +50,8 @@ target_mapper = {'Adelie': 0,
                 'Gento':2}
 def target_mapper(val):
   return target_mapper[val]
-  
-
+y = y_raw.apply(target_encode)
+y
 with st.expander('Input Features'):
   st.write('**Input Penquin**')
   input_df
