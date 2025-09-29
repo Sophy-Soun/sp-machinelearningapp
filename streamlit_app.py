@@ -37,7 +37,7 @@ data = {'island': island,
        'body_mass_g':body_mass_g,
        'gender':gender}
 input_df = pd.DataFrame(data, index = [0])
-input_penguis = pd.concat([input_df, X], index = 0)
+input_penguis = pd.concat([input_df, X], axis = 0)
 input_penguis
 
 
