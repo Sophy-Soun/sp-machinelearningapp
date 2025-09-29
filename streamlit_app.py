@@ -20,6 +20,7 @@ with st.expander('Data Visulization'):
   # "bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g","sex"
   st.scatter_chart(data = df, x ='bill_length_mm', y = 'body_mass_g', color = 'species')
 
+# Input Features
 with st.sidebar:
   st.header('Input Features')
   island = st.selectbox('Island', ('Biscoe','Drean','Tergernson'))
@@ -44,7 +45,7 @@ with st.expander('Input Features'):
   input_df
   st.write('*Combined penquins data*')
   input_penguins
-  
+# Data Preparation   
 # Encoder X
 encoder = ['island', 'sex']
 df_penquins = pd.get_dummies(input_penguins, prefix = encoder)
@@ -61,7 +62,7 @@ y = y_raw.apply(target_encode)
 y
 y_raw
 
-
+st.expander('Data preparation')
   st.write('Input Penguin Features')
   input_row
 
