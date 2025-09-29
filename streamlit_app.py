@@ -68,7 +68,7 @@ with st.expander('Data preparation'):
   y
 
 # Model Training
-clf = RandomForestClassifier()
+clf = RandomForestClassiffier()
 clf.fit(X_raw, y)
 
 # Apply the model for make predictions
