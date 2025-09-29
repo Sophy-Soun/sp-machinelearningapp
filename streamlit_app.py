@@ -37,9 +37,13 @@ data = {'island': island,
        'body_mass_g':body_mass_g,
        'gender':gender}
 input_df = pd.DataFrame(data, index = [0])
-input_penguis = pd.concat([input_df, X], axis = 0)
-input_penguis
+input_penguins = pd.concat([input_df, X], axis = 0)
 
+with st.expender('Input Features'):
+  st.write('**Input Penquin**')
+  input_df
+  st.write('*Combined penquins data*')
+  input_penquins
 
 
 
