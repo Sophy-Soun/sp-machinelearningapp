@@ -45,6 +45,10 @@ with st.expander('Input Features'):
   st.write('*Combined penquins data*')
   input_penguins
 
+# Encoder
+encoder = ['island', 'sex']
+df_penquins = pd.get_dummies(input_penquins, prefix = encoder)
+df_penquins[:1]
 
 
 
