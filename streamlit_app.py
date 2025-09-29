@@ -39,7 +39,7 @@ data = {'island': island,
 input_df = pd.DataFrame(data, index = [0])
 input_penguins = pd.concat([input_df, X], axis = 0)
 
-with st.expender('Input Features'):
+with st.expander('Input Features'):
   st.write('**Input Penquin**')
   input_df
   st.write('*Combined penquins data*')
