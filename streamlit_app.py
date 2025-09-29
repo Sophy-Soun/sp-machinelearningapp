@@ -39,6 +39,12 @@ data = {'island': island,
 input_df = pd.DataFrame(data, index = [0])
 input_penguins = pd.concat([input_df, X_raw], axis = 0)
 
+with st.expander('Input Features'):
+  st.write('**Input Penquin**')
+  input_df
+  st.write('*Combined penquins data*')
+  input_penguins
+  
 # Encoder X
 encoder = ['island', 'sex']
 df_penquins = pd.get_dummies(input_penguins, prefix = encoder)
@@ -52,13 +58,10 @@ target_mapper = {'Adelie': 0,
 def target_encode(val):
   return target_mapper[val]
 y = y_raw.apply(target_encode)
+y
 y_raw
 
-with st.expander('Input Features'):
-  st.write('**Input Penquin**')
-  input_df
-  st.write('*Combined penquins data*')
-  input_penguins
+
   st.write('Input Penguin Features')
   input_row
 
