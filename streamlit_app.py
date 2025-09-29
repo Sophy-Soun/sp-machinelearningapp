@@ -43,7 +43,7 @@ with st.expander('Input Features'):
   st.write('**Input Penquin**')
   input_df
   st.write('*Combined penquins data*')
-  input_penquins
+  input_penguins
 
 
 
